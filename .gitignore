@@ -1,0 +1,36 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE and Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Project generated artifacts (keep .gitkeep files)
+dataset/*
+!dataset/.gitkeep
+!dataset/README.md
+
+models/*
+!models/.gitkeep
+
+reports/*
+!reports/.gitkeep
+
+# Streamlit config / cache
+.streamlit/
