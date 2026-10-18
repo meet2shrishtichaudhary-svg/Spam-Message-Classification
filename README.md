@@ -1,5 +1,7 @@
 # 🛡️ Spam Message Classification System
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.app/new?repository=meet2shrishtichaudhary-svg/Spam-Message-Classification&branch=main&mainModule=app.py)
+
 An educational end-to-end Machine Learning minor project built with Python and Streamlit to classify SMS text messages into **Spam** (unwanted, promotional, suspicious) and **Ham** (legitimate, personal, normal messages).
 
 ---
