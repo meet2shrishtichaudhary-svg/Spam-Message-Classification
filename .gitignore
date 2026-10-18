@@ -21,16 +21,7 @@ env/
 .DS_Store
 Thumbs.db
 
-# Project generated artifacts (keep .gitkeep files)
-dataset/*
-!dataset/.gitkeep
-!dataset/README.md
-
-models/*
-!models/.gitkeep
-
-reports/*
-!reports/.gitkeep
-
-# Streamlit config / cache
-.streamlit/
+# Keep models, reports, and dataset for cloud hosting deployment
+# Ignore OS and temporary runtime files
+.streamlit/*
+!.streamlit/config.toml

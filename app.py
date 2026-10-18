@@ -173,6 +173,18 @@ cm_image_file = reports_dir / "confusion_matrix.png"
 
 artifacts_ready = model_file.is_file() and vectorizer_file.is_file()
 
+# Automatic self-healing training if artifacts are missing on first cloud launch
+if not artifacts_ready:
+    dataset_file = Path("dataset/spam.csv")
+    if dataset_file.is_file():
+        with st.spinner("⏳ First launch setup: Initializing and training Spam Classifier model..."):
+            try:
+                from src.train import train_models
+                train_models(dataset_path=dataset_file, models_dir=models_dir, reports_dir=reports_dir, verbose=False)
+                artifacts_ready = model_file.is_file() and vectorizer_file.is_file()
+            except Exception as e:
+                st.error(f"Automatic model training failed: {e}")
+
 # Main Application Layout: Two Columns
 col_left, col_right = st.columns([1.1, 0.9], gap="large")
 
